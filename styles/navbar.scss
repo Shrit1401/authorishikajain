@@ -1,4 +1,5 @@
 @import "./variables.scss";
+@import "./mixins.scss";
 
 nav {
   display: flex;
@@ -7,6 +8,11 @@ nav {
   margin: 10px 0;
   z-index: 99999;
   pointer-events: all;
+
+  @include mobile {
+    flex-direction: column;
+    gap: 10px;
+  }
 
   border-bottom: 1px solid #333333;
   ul {

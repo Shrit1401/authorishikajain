@@ -1,6 +1,7 @@
 import LandingLeft from "@/components/home/LandingLeft";
 import LandingRight from "@/components/home/LandingRight";
-import Navbar from "@/components/navbar/navbar";
+import Footer from "@/components/Usual/Footer";
+import Navbar from "@/components/Usual/navbar";
 import Head from "next/head";
 
 export default function Home() {
@@ -20,12 +21,14 @@ export default function Home() {
               <LandingLeft />
             </h1>
           </div>
+          <div className="line" />
 
           <div className="right">
             <LandingRight />
           </div>
         </div>
       </main>
+      <Footer />
     </>
   );
 }
