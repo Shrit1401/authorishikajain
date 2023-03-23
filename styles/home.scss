@@ -1,0 +1,45 @@
+@import "variables.scss";
+
+.home-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: calc(100vh - 100.05px);
+  margin: 0 5rem;
+
+  .left {
+    font-size: 16px;
+    h1 {
+      font-size: 3rem;
+      font-weight: 400;
+      margin-bottom: 1rem;
+
+      .block {
+        border-radius: 56px;
+        padding: 0 1rem;
+        font-weight: 200;
+        font-size: 2rem;
+        background-color: $primary-color;
+      }
+
+      .name {
+        font-weight: 446;
+        letter-spacing: 3px;
+      }
+    }
+
+    .description {
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      width: 600px;
+    }
+  }
+}
+
+.landLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  gap: 2rem;
+}

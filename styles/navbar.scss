@@ -1,0 +1,28 @@
+@import "./variables.scss";
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px 0;
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    li {
+      padding: 0 10px;
+      a {
+        font-size: 20px;
+        color: #000;
+        font-weight: 400;
+        text-decoration: none;
+        transition: all 0.3s ease-in-out;
+
+        &:hover,
+        &.active {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
