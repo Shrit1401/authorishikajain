@@ -58,7 +58,7 @@ const Navbar = ({ active }) => {
       return finalWord;
     }
 
-    var words = document.querySelectorAll("nav li a");
+    var words = document.querySelectorAll("nav  li a");
     words.forEach((word) => {
       var interv = "undefined";
       var canChange = false;
@@ -119,10 +119,10 @@ const Navbar = ({ active }) => {
       <div className="right">
         <ul>
           <li>
-            <a href="#">Home</a>
+            <a href="/">Home</a>
           </li>
           <li>
-            <a href="#">Book</a>
+            <a href="/books">Books</a>
           </li>
           <li>
             <a href="#">Arriving</a>

@@ -8,7 +8,7 @@ const LandingRight = () => {
         I write <span>Books</span>...
       </p>
       <Image
-        src="https://i.postimg.cc/GhVpHNVP/image.png"
+        src="https://i.postimg.cc/ryGm9VT8/image.png"
         width={641 - 50}
         height={706}
         className="image"

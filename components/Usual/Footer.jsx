@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-left">
-          <h1 className="footer-title">Author Ishika</h1>
+          <h1 className="footer-title">Ishika</h1>
           <p className="footer-text">
             © 2021 Author Ishika. All rights reserved.
           </p>
