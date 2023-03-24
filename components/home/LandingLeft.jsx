@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect } from "react";
+import { motion } from "framer-motion";
 
 const LandingLeft = () => {
   useEffect(() => {
@@ -96,17 +97,32 @@ const LandingLeft = () => {
   }, []);
   return (
     <div className="landLeft">
-      <h1>
+      <motion.h1
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+      >
         Hi I am <span className="block">writer</span> <br />{" "}
         <span className="name"> Ishika Jain</span>
-      </h1>
+      </motion.h1>
 
-      <p className="description">
+      <motion.p
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        className="description"
+      >
         I am Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem
         IpsumIpsumLorem IpsumIpsumLorem IpsumIpsumLorem IpsumIpsumLorem Ipsum
-      </p>
+      </motion.p>
 
-      <div className="flex">
+      <motion.div
+        // transform values
+        initial={{ y: 100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        className="flex"
+      >
         <a
           href="/about"
           target="_blank"
@@ -123,7 +139,7 @@ const LandingLeft = () => {
         >
           Work
         </a>
-      </div>
+      </motion.div>
     </div>
   );
 };

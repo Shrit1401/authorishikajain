@@ -35,4 +35,10 @@ nav {
       }
     }
   }
+
+  @include mobile {
+    .right {
+      margin-bottom: 20px;
+    }
+  }
 }

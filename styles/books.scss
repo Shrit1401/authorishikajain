@@ -79,6 +79,11 @@
     gap: 1rem;
     align-items: baseline;
 
+    @include mobile {
+      width: 100%;
+      align-items: center;
+    }
+
     h1 {
       font-size: 4rem;
       font-weight: lighter;
@@ -87,6 +92,10 @@
     p {
       font-size: 1.4rem;
       font-weight: lighter;
+
+      @include mobile {
+        text-align: center;
+      }
     }
   }
 }

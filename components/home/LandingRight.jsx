@@ -1,5 +1,5 @@
-import Image from "next/image";
 import React from "react";
+import { motion } from "framer-motion";
 
 const LandingRight = () => {
   return (
@@ -7,7 +7,9 @@ const LandingRight = () => {
       <p className="right-p">
         I write <span>Books</span>...
       </p>
-      <Image
+      <motion.img
+        animate={{ y: [0, 3, 0] }}
+        transition={{ duration: 1, repeat: Infinity, delay: 1 }}
         src="https://i.postimg.cc/ryGm9VT8/image.png"
         width={641 - 50}
         height={706}
@@ -19,7 +21,14 @@ const LandingRight = () => {
         <h1>Contact Me</h1>
 
         <a href="./contact" className="arrow btn">
-          <Image src="./arrow.svg" width={20} height={20} alt="arrow" />
+          <motion.img
+            animate={{ x: [0, 3, 0] }}
+            transition={{ duration: 1, repeat: Infinity, delay: 1 }}
+            src="./arrow.svg"
+            width={20}
+            height={20}
+            alt="arrow"
+          />
         </a>
       </div>
     </div>

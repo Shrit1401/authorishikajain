@@ -3,6 +3,7 @@ import LandingRight from "@/components/home/LandingRight";
 import Footer from "@/components/Usual/Footer";
 import Navbar from "@/components/Usual/navbar";
 import Head from "next/head";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
@@ -21,7 +22,14 @@ export default function Home() {
               <LandingLeft />
             </h1>
           </div>
-          <div className="line" />
+          <motion.div
+            className="line"
+            // animate the hegiht
+            initial={{ height: 0 }}
+            animate={{ height: "100%" }}
+            transition={{ duration: 2 }}
+            // animate the width
+          />
 
           <div className="right">
             <LandingRight />

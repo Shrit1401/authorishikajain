@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React, { useEffect } from "react";
+import { motion } from "framer-motion";
 
 const Navbar = ({ active }) => {
   useEffect(() => {
@@ -106,15 +107,19 @@ const Navbar = ({ active }) => {
   }, []);
 
   return (
-    <nav>
-      <div className="left">
+    <motion.nav
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: 0, opacity: "100%" }}
+      transition={{ duration: 0.8 }}
+    >
+      <a href="/" className="left">
         <Image
           src="https://i.postimg.cc/xT7bRV2F/image.png"
           alt="logo"
           width={318 / 2}
           height={140.5 / 2}
         />
-      </div>
+      </a>
 
       <div className="right">
         <ul>
@@ -125,14 +130,14 @@ const Navbar = ({ active }) => {
             <a href="/books">Books</a>
           </li>
           <li>
-            <a href="#">Arriving</a>
+            <a href="/arriving">Arriving</a>
           </li>
           <li>
-            <a href="#">Contact</a>
+            <a href="/contact">Contact</a>
           </li>
         </ul>
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 
