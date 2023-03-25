@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="footer-left">
           <h1 className="footer-title">Ishika</h1>
           <p className="footer-text">
-            © 2021 Author Ishika. All rights reserved.
+            © {new Date().getFullYear()} Author Ishika. All rights reserved.
           </p>
         </div>
         <div className="footer-right">
@@ -52,6 +52,7 @@ const Footer = () => {
             </a>
           </div>
         </div>
+        {/* Made By Shrit Shrivastava */}
       </div>
     </footer>
   );

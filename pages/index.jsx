@@ -6,6 +6,9 @@ import Head from "next/head";
 import { motion } from "framer-motion";
 
 export default function Home() {
+  console.log(
+    "This Website is made by @Shrit1401 (https://github.com/Shrit1401)'"
+  );
   return (
     <>
       <Head>
@@ -24,11 +27,9 @@ export default function Home() {
           </div>
           <motion.div
             className="line"
-            // animate the hegiht
             initial={{ height: 0 }}
             animate={{ height: "100%" }}
             transition={{ duration: 2 }}
-            // animate the width
           />
 
           <div className="right">

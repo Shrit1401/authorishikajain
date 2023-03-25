@@ -127,6 +127,9 @@ const Navbar = ({ active }) => {
             <a href="/">Home</a>
           </li>
           <li>
+            <a href="/about">About</a>
+          </li>
+          <li>
             <a href="/books">Books</a>
           </li>
           <li>
@@ -137,6 +140,13 @@ const Navbar = ({ active }) => {
           </li>
         </ul>
       </div>
+
+      <div
+        className="line-hori"
+        initial={{ width: 0 }}
+        animate={{ width: "100%" }}
+        transition={{ duration: 2 }}
+      />
     </motion.nav>
   );
 };

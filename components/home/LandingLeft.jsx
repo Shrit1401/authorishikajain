@@ -106,16 +106,6 @@ const LandingLeft = () => {
         <span className="name"> Ishika Jain</span>
       </motion.h1>
 
-      <motion.p
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        className="description"
-      >
-        I am Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem
-        IpsumIpsumLorem IpsumIpsumLorem IpsumIpsumLorem IpsumIpsumLorem Ipsum
-      </motion.p>
-
       <motion.div
         // transform values
         initial={{ y: 100, opacity: 0 }}
@@ -123,12 +113,7 @@ const LandingLeft = () => {
         transition={{ duration: 0.5 }}
         className="flex"
       >
-        <a
-          href="/about"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn"
-        >
+        <a href="/about" className="btn">
           About Me
         </a>
         <a
