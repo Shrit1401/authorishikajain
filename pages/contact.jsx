@@ -3,8 +3,15 @@ import Footer from "@/components/Usual/Footer";
 import Navbar from "@/components/Usual/navbar";
 import Head from "next/head";
 import React from "react";
+import { motion } from "framer-motion";
 
 const contact = [
+  {
+    svg: "./icons/mail.svg",
+    username: "queenishika5@gmail.com",
+    title: "Email",
+    link: "mailto:queenishika5@gmail.com",
+  },
   {
     svg: "./icons/link.svg",
     username: "prettyimbecile",
@@ -51,9 +58,22 @@ const Contact = () => {
       </Head>
       <Navbar active={"contact"} />
 
-      <h1 className="head">Contact Me</h1>
+      <motion.h1
+        initial={{ opacity: 0, y: -100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.5 }}
+        className="head"
+      >
+        Contact Me
+      </motion.h1>
 
-      <div className="flex contacts">
+      <motion.div
+        // pop out
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 1.3 }}
+        className="flex contacts"
+      >
         {contact.map((item) => {
           return (
             <ContactCard
@@ -64,7 +84,7 @@ const Contact = () => {
             />
           );
         })}
-      </div>
+      </motion.div>
 
       <Footer />
     </div>

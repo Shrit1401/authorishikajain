@@ -5,6 +5,8 @@ import React from "react";
 import UpcomingComp from "@/components/books/upcomingComp";
 
 import Marquee from "react-fast-marquee";
+import { motion } from "framer-motion";
+import { client } from "@/lib/client";
 
 const books = [
   {
@@ -26,7 +28,7 @@ const books = [
   },
 ];
 
-const Books = () => {
+const Books = ({ arrvingBooks }) => {
   return (
     <div className="books">
       <Head>
@@ -34,70 +36,81 @@ const Books = () => {
       </Head>
       <Navbar active={"arriving"} />
 
-      <h1 className="heading">
+      <motion.h1
+        initial={{ opacity: 0, y: -100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.5 }}
+        className="heading"
+      >
         Upcoming
         <br />
         <p>Books</p>
-      </h1>
+      </motion.h1>
 
-      <Marquee
-        gradient={false}
-        style={{
-          color: "black",
-          fontSize: "5rem",
-          fontWeight: "lighter",
-          padding: "1rem",
-          backgroundColor: "var(--primary-color)",
-          width: "100%",
-          textAlign: "center",
-          margin: "0 auto",
-          marginTop: "2rem",
-          marginBottom: "2rem",
-          display: "flex",
-          gap: "1rem",
-        }}
-        className="marquee"
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 1 }}
       >
-        <p
+        <Marquee
+          gradient={false}
           style={{
-            marginRight: "3rem",
+            color: "black",
+            fontSize: "5rem",
+            fontWeight: "lighter",
+            padding: "1rem",
+            backgroundColor: "var(--primary-color)",
+            width: "100%",
+            textAlign: "center",
+            margin: "0 auto",
+            marginTop: "2rem",
+            marginBottom: "2rem",
+            display: "flex",
+            gap: "1rem",
           }}
+          className="marquee"
         >
-          Upcoming books
-        </p>
-        <p
-          style={{
-            marginRight: "3rem",
-            fontWeight: "bold",
-          }}
-        >
-          Upcoming books
-        </p>
-        <p
-          style={{
-            marginRight: "3rem",
-          }}
-        >
-          Upcoming books
-        </p>
-        <p
-          style={{
-            marginRight: "3rem",
-            fontWeight: "bold",
-          }}
-        >
-          Upcoming books
-        </p>
-      </Marquee>
+          <p
+            style={{
+              marginRight: "3rem",
+            }}
+          >
+            Upcoming books
+          </p>
+          <p
+            style={{
+              marginRight: "3rem",
+              fontWeight: "bold",
+            }}
+          >
+            Upcoming books
+          </p>
+          <p
+            style={{
+              marginRight: "3rem",
+            }}
+          >
+            Upcoming books
+          </p>
+          <p
+            style={{
+              marginRight: "3rem",
+              fontWeight: "bold",
+            }}
+          >
+            Upcoming books
+          </p>
+        </Marquee>
+      </motion.div>
 
       <div className="book-components">
-        {books.map((book, index) => {
+        {arrvingBooks.map((book, index) => {
           return (
             <UpcomingComp
               key={index}
               image={book.image}
               title={book.title}
-              desc={book.desc}
+              desc={book.description}
             />
           );
         })}
@@ -106,6 +119,16 @@ const Books = () => {
       <Footer />
     </div>
   );
+};
+
+export const getServerSideProps = async () => {
+  const query = '*[_type == "arriving-book"]';
+  const arrvingBooks = await client.fetch(query);
+  return {
+    props: {
+      arrvingBooks,
+    },
+  };
 };
 
 export default Books;

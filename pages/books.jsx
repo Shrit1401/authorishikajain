@@ -3,8 +3,10 @@ import Footer from "@/components/Usual/Footer";
 import Navbar from "@/components/Usual/navbar";
 import Head from "next/head";
 import React from "react";
+import { motion } from "framer-motion";
 
 import Marquee from "react-fast-marquee";
+import { client } from "@/lib/client";
 
 const books = [
   {
@@ -26,7 +28,8 @@ const books = [
   },
 ];
 
-const Books = () => {
+const Books = ({ releasedBooks }) => {
+  console.log(releasedBooks);
   return (
     <div className="books">
       <Head>
@@ -34,14 +37,24 @@ const Books = () => {
       </Head>
       <Navbar active={"books"} />
 
-      <h1 className="heading">
+      <motion.h1
+        initial={{ opacity: 0, y: -100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.5 }}
+        className="heading"
+      >
         Happiness
         <span className="word">is</span>
         <br />
         <p>Reality</p>
-      </h1>
+      </motion.h1>
 
-      <div className="flex books-holder">
+      <motion.div
+        initial={{ opacity: 0, x: -100 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, delay: 1 }}
+        className="flex books-holder"
+      >
         <div className="book__cover">
           <img src="https://i.postimg.cc/k4KpbYk5/image.png" alt="book cover" />
         </div>
@@ -53,7 +66,7 @@ const Books = () => {
         <div className="book__cover">
           <img src="https://i.postimg.cc/gjB8kmNL/image.png" alt="book cover" />
         </div>
-      </div>
+      </motion.div>
 
       <Marquee
         gradient={false}
@@ -106,13 +119,14 @@ const Books = () => {
       </Marquee>
 
       <div className="book-components">
-        {books.map((book, index) => {
+        {releasedBooks.map((book, index) => {
           return (
             <BookComponent
               key={index}
               image={book.image}
               title={book.title}
-              desc={book.desc}
+              desc={book.description}
+              link={book.link}
             />
           );
         })}
@@ -121,6 +135,16 @@ const Books = () => {
       <Footer />
     </div>
   );
+};
+
+export const getServerSideProps = async () => {
+  const query = '*[_type == "released-book"]';
+  const releasedBooks = await client.fetch(query);
+  return {
+    props: {
+      releasedBooks,
+    },
+  };
 };
 
 export default Books;
