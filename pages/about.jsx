@@ -21,10 +21,17 @@ const About = () => {
           className="left"
         >
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet,
-            eligendi repellendus ea, harum optio enim ut laudantium quia eum
-            porro deleniti! Quo vero impedit enim, suscipit expedita error iste
-            iure?
+            Ishika Jain is a young author from India who ventured into this
+            world of writing and books at the young age of fifteen and hasn’t
+            been able to escape it since. Her debut YA novel ‘17 Days And Die’
+            came out in early 2022 and has received amazing response from the
+            readers. She’s been a co-author in many anthologies and in 2023 she
+            edited her own anthology— ‘Days To Relive’ and worked with various
+            authors from around the world. Not only that, she is also an Indian
+            Record Holder for her books. She’s currently pursuing journalism and
+            wishes to embark on the same career path. Most of the time, she can
+            be found huddled in her bed, reading thriller and romance
+            books—which she claims are her catnip.
           </p>
         </motion.div>
         <div className="right">

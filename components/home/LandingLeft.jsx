@@ -116,13 +116,8 @@ const LandingLeft = () => {
         <a href="/about" className="btn">
           About Me
         </a>
-        <a
-          href="/about"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn border"
-        >
-          Work
+        <a href="/contact" className="btn border">
+          Contact
         </a>
       </motion.div>
     </div>
