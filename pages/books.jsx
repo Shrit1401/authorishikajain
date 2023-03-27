@@ -29,7 +29,6 @@ const books = [
 ];
 
 const Books = ({ releasedBooks }) => {
-  console.log(releasedBooks);
   return (
     <div className="books">
       <Head>
@@ -47,28 +46,28 @@ const Books = ({ releasedBooks }) => {
         transition={{ duration: 0.8, delay: 0.5 }}
         className="heading"
       >
-        Happiness
-        <span className="word">is</span>
+        The world belongs
+        <br /> to those who read
         <br />
-        <p>Reality</p>
+        <span className="word">—Rick Holland</span>
       </motion.h1>
 
       <motion.div
         initial={{ opacity: 0, x: -100 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, delay: 1 }}
-        className="flex books-holder"
+        className="books-holder"
       >
         <div className="book__cover">
-          <img src="https://i.postimg.cc/k4KpbYk5/image.png" alt="book cover" />
+          <img src="./book/one.jpg" alt="book cover" />
         </div>
 
         <div className="book__cover">
-          <img src="https://i.postimg.cc/FzhDJryP/image.png" alt="book cover" />
+          <img src="./book/two.jpg" alt="book cover" />
         </div>
 
         <div className="book__cover">
-          <img src="https://i.postimg.cc/gjB8kmNL/image.png" alt="book cover" />
+          <img src="./book/three.jpg" alt="book cover" />
         </div>
       </motion.div>
 

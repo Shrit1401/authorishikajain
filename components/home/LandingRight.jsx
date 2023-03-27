@@ -27,7 +27,7 @@ const LandingRight = () => {
           initial={{ opacity: 0, x: -100, rotate: 14.49 }}
           animate={{ opacity: 1, x: 0, rotate: -14.49 }}
           transition={{ duration: 1, delay: 1 }}
-          src="./landing/zero.jpg"
+          src="./landing/two.jpg"
           className="top-left"
         />
         <motion.img
@@ -41,12 +41,12 @@ const LandingRight = () => {
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, delay: 1.6 }}
-          src="./landing/two.jpg"
+          src="./landing/zero.jpg"
           className="center"
         />
         <motion.img
-          initial={{ opacity: 0, y: 100 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 100, rotate: 0 }}
+          animate={{ opacity: 1, y: 0, rotate: -10.72 }}
           transition={{ duration: 1, delay: 1.9 }}
           src="./landing/three.jpg"
           className="bottom-left"

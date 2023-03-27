@@ -65,6 +65,10 @@
 .right {
   position: relative;
   width: 50%;
+
+  @include mobile {
+    width: 100%;
+  }
 }
 
 .landRight {
@@ -143,7 +147,7 @@
       height: 423px;
       z-index: 9;
       bottom: 20vh;
-      left: calc(50% / 2);
+      left: calc(50% / 1.7);
     }
 
     @include mobile {

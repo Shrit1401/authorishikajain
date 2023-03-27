@@ -102,7 +102,7 @@ const LandingLeft = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
-        Hi I am <span className="block">writer</span> <br />{" "}
+        Hi I am <span className="block">author</span> <br />{" "}
         <span className="name"> Ishika Jain</span>
       </motion.h1>
 
@@ -115,9 +115,6 @@ const LandingLeft = () => {
       >
         <a href="/about" className="btn border">
           About Me
-        </a>
-        <a href="/contact" className="btn border">
-          Contact
         </a>
       </motion.div>
 
