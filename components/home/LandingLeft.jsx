@@ -113,11 +113,23 @@ const LandingLeft = () => {
         transition={{ duration: 0.5 }}
         className="flex"
       >
-        <a href="/about" className="btn">
+        <a href="/about" className="btn border">
           About Me
         </a>
         <a href="/contact" className="btn border">
           Contact
+        </a>
+      </motion.div>
+
+      <motion.div
+        // transform values
+        initial={{ y: 100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        className="flex"
+      >
+        <a href="/before-you-read" className="btn">
+          Before You Read
         </a>
       </motion.div>
     </div>

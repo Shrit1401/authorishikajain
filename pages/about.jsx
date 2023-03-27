@@ -8,7 +8,11 @@ const About = () => {
   return (
     <div className="about">
       <Head>
-        <title>About Us</title>
+        <title>About Author</title>
+        <link
+          rel="icon"
+          href="https://i.postimg.cc/T2ZPPC5h/Whats-App-Image-2023-03-23-at-22-29-51-removebg-preview.png"
+        />
       </Head>
       <Navbar active="about" />
       <h1>About Us</h1>
@@ -39,7 +43,7 @@ const About = () => {
             initial={{ opacity: 0, x: 100 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 1 }}
-            src="https://i.postimg.cc/Twkn1JkH/image.png"
+            src="./about.jpg"
           />
         </div>
       </div>

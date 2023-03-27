@@ -6,9 +6,11 @@ nav {
   justify-content: space-around;
   align-items: center;
   position: relative;
-  margin: 10px 0;
+  padding-top: 10px;
+  margin-bottom: 10px;
   z-index: 99999;
   pointer-events: all;
+  background: linear-gradient(180deg, #fec6c7 75%, rgba(255, 255, 255, 0) 100%);
 
   @include mobile {
     flex-direction: column;

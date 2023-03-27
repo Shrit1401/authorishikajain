@@ -1,4 +1,5 @@
 @import "./variables.scss";
+@import "./mixins.scss";
 
 .contact {
   .head {
@@ -6,6 +7,10 @@
     margin-left: 40px;
     font-weight: lighter;
     margin-bottom: 40px;
+
+    @include mobile {
+      font-size: 3rem;
+    }
   }
 
   .contacts {
@@ -62,5 +67,59 @@
   p {
     font-size: 1rem;
     font-weight: lighter;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  width: 100%;
+  height: 100%;
+
+  .input {
+    width: 300px;
+    height: 50px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 1.2rem;
+    font-weight: lighter;
+    outline: none;
+    border: 2px solid black;
+  }
+
+  textarea {
+    width: 300px;
+    height: 200px;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: lighter;
+    border: 2px solid black;
+  }
+
+  .flex {
+    justify-content: center;
+    gap: 30px;
+
+    @include mobile {
+      flex-direction: column;
+      gap: 0;
+    }
+  }
+
+  .btn {
+    width: 300px;
+    height: 65px;
+
+    @include mobile {
+      width: 90%;
+      height: inherit;
+    }
   }
 }

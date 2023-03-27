@@ -105,12 +105,12 @@ const Navbar = ({ active }) => {
       word.addEventListener("mouseenter", init);
     });
   }, []);
-
   return (
     <motion.nav
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: "100%" }}
       transition={{ duration: 0.8 }}
+      className="nav"
     >
       <a href="/" className="left">
         <Image

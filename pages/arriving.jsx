@@ -33,6 +33,10 @@ const Books = ({ arrvingBooks }) => {
     <div className="books">
       <Head>
         <title>Upcoming Books</title>
+        <link
+          rel="icon"
+          href="https://i.postimg.cc/T2ZPPC5h/Whats-App-Image-2023-03-23-at-22-29-51-removebg-preview.png"
+        />
       </Head>
       <Navbar active={"arriving"} />
 

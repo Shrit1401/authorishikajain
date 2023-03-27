@@ -55,6 +55,10 @@ const Contact = () => {
     <div className="contact">
       <Head>
         <title>Contact Me</title>
+        <link
+          rel="icon"
+          href="https://i.postimg.cc/T2ZPPC5h/Whats-App-Image-2023-03-23-at-22-29-51-removebg-preview.png"
+        />
       </Head>
       <Navbar active={"contact"} />
 
@@ -67,6 +71,40 @@ const Contact = () => {
         Contact Me
       </motion.h1>
 
+      <div className="form">
+        <form action="https://formspree.io/f/moqznboz" method="POST">
+          <div className="flex">
+            <input
+              type="text"
+              name="name"
+              placeholder="Name"
+              className="input"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              className="input"
+              required
+            />
+          </div>
+          {/* message */}
+          <textarea name="message" placeholder="Message" required />
+          <button type="submit" className="btn">
+            Send
+          </button>
+        </form>
+      </div>
+
+      <motion.h2
+        initial={{ opacity: 0, y: -100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.5 }}
+        className="head"
+      >
+        Social Media
+      </motion.h2>
       <motion.div
         // pop out
         initial={{ opacity: 0, y: 100 }}
