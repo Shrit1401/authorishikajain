@@ -16,7 +16,7 @@ const About = () => {
       </Head>
 
       <Navbar active="about" />
-      <h1>About Us</h1>
+      <h1>About Author</h1>
 
       <div className="about-inner flex">
         <motion.div
