@@ -69,3 +69,25 @@ input,
 textarea {
   font-family: "Space Grotesk", sans-serif;
 }
+
+.mobile {
+  display: none;
+
+  @include mobile {
+    display: block;
+  }
+}
+
+.laptop {
+  display: block;
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.typed-cursor {
+  @include mobile {
+    display: none;
+  }
+}

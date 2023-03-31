@@ -1,6 +1,7 @@
 @import "./variables.scss";
 @import "./mixins.scss";
 .about {
+  overflow: hidden;
   h1 {
     font-size: 6rem;
     margin-left: 40px;

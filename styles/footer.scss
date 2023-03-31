@@ -1,4 +1,5 @@
 @import "./mixins.scss";
+@import "./variables.scss";
 footer {
   background-color: $bg-color;
   padding: 2rem 0;
@@ -8,13 +9,14 @@ footer {
   font-weight: 500;
   display: flex;
   width: 100%;
+  height: auto;
   justify-content: center;
   align-items: center;
-  position: static;
   flex-direction: column;
   gap: 2rem;
   margin-top: 2rem;
   z-index: 1;
+
   overflow: hidden;
   background-color: $primary-color;
   color: black;

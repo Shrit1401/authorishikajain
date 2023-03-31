@@ -22,7 +22,7 @@ const LandingRight = () => {
   return (
     <div className="landRight">
       <p className="right-p" ref={el} />
-      <div className="image">
+      <div className="image laptop">
         <motion.img
           initial={{ opacity: 0, x: -100, rotate: 14.49 }}
           animate={{ opacity: 1, x: 0, rotate: -14.49 }}
@@ -73,6 +73,14 @@ const LandingRight = () => {
             alt="arrow"
           />
         </a>
+      </div>
+
+      <div className="mobile images">
+        <img className="image" src="./landing/two.jpg" />
+        <img className="image" src="./landing/one.jpg" />
+        <img className="image" src="./landing/zero.jpg" />
+        <img className="image" src="./landing/three.jpg" />
+        <img className="image" src="./landing/four.jpg" />
       </div>
     </div>
   );
